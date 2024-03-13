@@ -1,0 +1,601 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="pxdraft">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Ramesh - Portfolio Template">
+    <meta name="description" content="Ramesh - Portfolio Template">
+    <!-- title -->
+    <title>Ramesh Thapa - Portfolio</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- theme css -->
+    <link href="{% static 'app/assets/css/style.css'%}" rel="stylesheet">
+</head>
+<!-- Body Start -->
+
+<body>
+    <!-- Header Top -->
+    <header class="main-header d-lg-none">
+        <div class="container">
+            <!-- Brand -->
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                <h1> Ramesh</h1>
+                    {% comment %} <img class="logo-dark" title="" alt="" src="{{intro.logo.url}}">
+                    <img class="logo-light" title="" alt="" src="{{intro.logo.url}}"> {% endcomment %}
+                </a>
+            </div>
+            <div class="ms-auto">
+                <button class="toggler-menu">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Top -->
+    <div class="header-left-fixed one-page-nav">
+        <!-- Brand -->
+        {% comment %} <div class="logo">
+            <a class="navbar-brand" href="#">
+                <b> Home</b>
+
+            </a>
+        </div> {% endcomment %}
+        <!-- / -->
+        <ul class="main-menu">
+            <li>
+                <a data-scroll-nav="0" href="#home">
+                    <span class="m-icon">
+                        <i class="bi-house-door"></i>
+                    </span>
+                    <span class="m-text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a data-scroll-nav="1" href="#services">
+                    <span class="m-icon">
+                        <i class="bi-person"></i>
+                    </span>
+                    <span class="m-text">About</span>
+                </a>
+            </li>
+            {% comment %} <li>
+                <a data-scroll-nav="2" href="#services">
+                    <span class="m-icon">
+                        <i class="bi-briefcase"></i>
+                    </span>
+                    <span class="m-text">Services</span>
+                </a>
+            </li> {% endcomment %}
+            <li>
+                <a data-scroll-nav="3" href="#work">
+                    <span class="m-icon">
+                        <i class="bi-columns"></i>
+                    </span>
+                    <span class="m-text">Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a data-scroll-nav="4" href="#contactus">
+                    <span class="m-icon">
+                        <i class="bi-telephone"></i>
+                    </span>
+                    <span class="m-text">Contact</span>
+                </a>
+            </li>
+        </ul>
+        <!-- Top Menu -->
+        <div class="theme-btn dropdown">
+            <button class="btn dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+                <span class="bi my-1 theme-icon-active">
+                    <i class="bi-circle-half"></i>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                        <span class="bi me-2 opacity-50 theme-icon">
+                            <i class="bi-sun-fill"></i>
+                        </span>
+                        Light
+                        <span class="bi ms-auto d-none">
+                            <i class="bi-check2"></i>
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                        <span class="bi me-2 opacity-50 theme-icon">
+                            <i class="bi-moon-stars-fill"></i>
+                        </span>
+                        Dark
+                        <span class="bi ms-auto d-none">
+                            <i class="bi-check2"></i>
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+                        <span class="bi me-2 opacity-50 theme-icon">
+                            <i class="bi-circle-half"></i>
+                        </span>
+                        Auto
+                        <span class="bi ms-auto d-none">
+                            <i class="bi-check2"></i>
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- / -->
+    </div>
+    <!-- Main -->
+    <main class="wrapper">
+        <!-- Home -->
+        <section id="home" data-scroll-index="0" class="home-section">
+            <div class="container">
+                <div class="row align-items-center min-vh-100 flex-row-reverse">
+                    <div class="col-lg-6 ps-xl-5 mb-5 mb-lg-0">
+                        <div class="home-intro">
+                            <h6>👋 Hi, I’ m</h6>
+                            <h1>{{intro.fullname}} </h1>
+                            <h2>I'm a <span id="type-it"></span></h2>
+                            <p class="pe-lg-5">{{intro.short_Intro}}</p>
+                            <div class="btn-bar">
+                                <a class="px-btn px-btn-theme" href="{{intro.cv.url}}">Download cv <i class="bi-download"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="home-image text-center">
+                            <div class="hi-icon-top">
+                               
+                            </div>
+                            <div class="hi-icon-bottom">
+                              
+                            </div>
+                            <img src="{{intro.image.url}}" title="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Home -->
+        <!-- About -->
+        <section id="about" data-scroll-index="1" class="section about-section gray-bg-1">
+            <div class="container">
+                <div class="about-me">
+                    <div class="row align-items-start">
+                        <div class="col-lg-5 pb-4 pb-lg-0">
+                            <div class="title-01">
+                                <span>About Me</span>
+                            </div>
+                            <div class="about-me-text pb-5">
+                                <h3>My Name Is {{intro.fullname}}</h3>
+                                <h5><span>I Am Available</span> For {{about.availablefor}}</h5>
+                                <p>{{about.short_intro}}</p>
+                                <div class="row pt-2">
+                                    <div class="col-auto">
+                                        <div class="a-count">
+                                            <span class="count">{{about.completedProjects}}</span>
+                                            <div class="a-count-text">Projects <br>Completed.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="a-count">
+                                            <span class="count">{{about.clients}}</span>
+                                            <div class="a-count-text">Satisfied <br>Clients.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="title-01 mt-5">
+                                <span>Experience</span>
+                            </div>
+                            <div class="resume-box">
+                                <ul>
+                                    {% for item in exp%}
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <span class="time">{{item.startedDate}} -{% if item.endDate %} {{item.endDate}}{%else%}Present{%endif%}</span>
+                                        <h5>{{item.designation}} - {{item.companyName}}</h5>
+                                        <p>{{item.short_description_about_work}}</p>
+                                    </li>
+                                    {%endfor%}
+                               
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 sticky-lg-top ps-xl-5">
+                            <div class="row align-items-start">
+                                <div class="col-md-7 py-4">
+                                    <div class="about-me-img">
+                                        <img src="{{about.image.url}}" title="" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-5 py-4">
+                                    <div class="about-content">
+                                        <ul>
+                                            <li>
+                                                <div class="a-icon">
+                                                    <i class="fab fa-instagram"></i>
+                                                </div>
+                                                <div class="a-text">
+                                                    <a class="text-reset stretched-link" href="{{about.instagramUrl}}" target=_blank>Instagram</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="a-icon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </div>
+                                                <div class="a-text">
+                                                    <a class="text-reset stretched-link"href="mailto:{{about.gmail}}" target=_blank>Mail Me</a>
+                                                </div>
+                                            </li>
+                                     
+                                            <li>
+                                                <div class="a-icon">
+                                                    <i class="fa fa-map"></i>
+                                                </div>
+                                                <div class="a-text">
+                                                    <a class="text-reset stretched-link" href="{{about.locationUrl.url}}" target=_blank>Meet Me</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="a-icon">
+                                                    <i class="fa-solid fa-file-pdf"></i>
+                                                </div>
+                                                <div class="a-text">
+                                                    <a class="text-reset stretched-link" href="{{intro.cv.url}}" target=_blank>Resume</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-12 py-4">
+                                    <div class="title-01">
+                                        <span>Skills</span>
+                                    </div>
+                                    <div class="skills">
+                                        {% for item in skills %}
+                                        <div class="skill-lt">
+                                            <h6 class="dark-color">{{item.title}}</h6>
+                                            <div class="skill-bar">
+                                                <div class="skill-bar-in" role="progressbar" aria-valuenow="{{item.rateSkill_1to100}}" aria-valuemin="0" aria-valuemax="100">
+                                                    <span>{{item.rateSkill_1to100}}%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {%endfor%}
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About -->
+        <!-- Services -->
+        {% comment %} <section id="services" data-scroll-index="2" class="section services-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h3>
+                        <span>MY SERVICES</span>
+                    </h3>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="feature-box-01">
+                            <div class="icon"><i class="bi bi-phone"></i></div>
+                            <div class="feature-content">
+                                <h5>Web Design</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="feature-box-01">
+                            <div class="icon"><i class="bi bi-laptop"></i></div>
+                            <div class="feature-content">
+                                <h5>Development</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="feature-box-01">
+                            <div class="icon"><i class="bi bi-triangle"></i></div>
+                            <div class="feature-content">
+                                <h5>SEO Marketing</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="feature-box-01">
+                            <div class="icon"><i class="bi bi-columns"></i></div>
+                            <div class="feature-content">
+                                <h5>Web Design</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="feature-box-01">
+                            <div class="icon"><i class="bi bi-distribute-vertical"></i></div>
+                            <div class="feature-content">
+                                <h5>Development</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="feature-box-01">
+                            <div class="icon"><i class="bi bi-globe2"></i></div>
+                            <div class="feature-content">
+                                <h5>SEO Marketing</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!-- End Services -->
+        <!-- portfolio -->
+        <section id="portfolio" data-scroll-index="3" class="section portfolio-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h3>
+                        <span>My Portfolio</span>
+                    </h3>
+                </div>
+                <div class="lightbox-gallery">
+                    <div class="row g-3 g-lg-4 portfolio-content">
+                        {% for item in porfolio %}
+                        <div class="col-sm-6 col-lg-4 grid-item">
+                            <div class="portfolio-box">
+                                <div class="portfolio-text">
+                                    <h6>{{item.projectType}}</h6>
+                                    <p>{{item.projectName}}</p>
+                                    <a class="gallery-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{item.id}}"><i class="bi-arrow-up-right-circle"></i></a>
+                                </div>
+                                <div class="portfolio-img">
+                                    <img src="{{item.image.url}}" title="" alt="">
+                                    <a class="px_modal portfolio-modal-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{item.id}}">
+
+                                   
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+    <!-- Snigle 1 -->
+
+                        {%endfor%}
+                
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+    {% for item in porfolio %}
+    <div class="modal fade" id="staticBackdrop{{item.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="" class="">
+                    <div class="single-project-box">
+                        <div class="row align-items-start p-5" >
+                            <div class="col-lg-7">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <img class="border" src="{{item.image.url}}" style="height:200px;width300px;" title="" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <img class="border" src="{{item.image2.url}}"style="height:200px;width300px;" title="" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <img class="border" src="{{item.image3.url}}"style="height:200px;width300px;" title="" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <img class="border" src="{{item.image4.url}}" style="height:200px;width300px;"title="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 pt-4 pt-lg-0">
+                                <h4>{{item.projectName}}</h4>
+                                <p class="mb-3">{{item.short_description}}</p>
+                                <div class="about-content">
+                                    <ul>
+                                        <li class="d-flex">
+                                            <span class="col-4 col-lg-3">Type:</span>
+                                            <span>{{item.projectType}}</span>
+                                        </li>
+                                        <li class="d-flex">
+                                            <span class="col-4 col-lg-3">Langages:</span>
+                                            <span>{{item.languageUsed}}</span>
+                                        </li>
+                                        {% comment %} <li class="d-flex">
+                                            <span class="col-4 col-lg-3">Platform:</span>
+                                            <span>WordPress</span>
+                                        </li> {% endcomment %}
+                                        <li class="d-flex">
+                                            <span class="col-4 col-lg-3">Country:</span>
+                                            <span>{{item.country}}</span>
+                                        </li>
+                                        <li class="d-flex">
+                                            <span class="col-4 col-lg-3">Live URL:</span>
+                                            <span>{{item.projectUrl}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+        <!-- End portfolio -->
+        <!-- Testimonials -->
+       
+        <!-- End Testimonials -->
+        <!-- contactus -->
+        <section id="contactus" data-scroll-index="4" class="section contactus-section gray-bg-1">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-5 d-flex">
+                        <div class="d-flex flex-column w-100">
+                            <div class="contact-info">
+                                <h3>Let’s Discuss Your Project</h3>
+                                <ul>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="bi-chat-left-dots-fill"></i>
+                                        </div>
+                                        <div class="text">
+                                            <label>Chat to us</label>
+                                            <p>Our friendly team is there to help. <span><a class="text-reset" href="mailto:{{about.gmail}}">{{about.gmail}}</a></span></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="bi-compass"></i>
+                                        </div>
+                                        <div class="text">
+                                            <label>Visit us</label>
+                                            <p> Come say hello at our office HQ. <span> {{intro.address}}</span></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="bi-phone"></i>
+                                        </div>
+                                        <div class="text">
+                                            <label>Call us</label>
+                                            <p>Mon-Fri from 8am to 5pm. <span>+977 {{intro.phoneNo}}</span></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="google-map mt-5">
+                                    <div class="ratio ratio-21x9">
+                                        <iframe src="{{about.locationUrl}}" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 ps-xl-5">
+                        <div class="contact-form">
+                            <div class="contact-head">
+                                <h4>Got Ideas? We've got the skills. Let's team up.</h4>
+                                <p>Tell us more about yourself and what you're got in mind.</p>
+                            </div>
+
+                            
+                            <form id="" method="POST" action="{% url 'contact' %}" >
+                                {% csrf_token %}
+
+                                <div class="row gx-3 gy-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">First name</label>
+                                            <input name="name" id="name" placeholder="Name *" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Your Email</label>
+                                            <input name="email" id="email" placeholder="Email *" class="form-control" type="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label">Subject</label>
+                                            <input name="subject" id="subject" placeholder="Subject *" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="form-label">Your message</label>
+                                            <textarea name="message" id="message" placeholder="Your message *" rows="4" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="send">
+                                            <button class="px-btn w-100" type="submit" > Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End contactus -->
+    </main>
+    <!-- Main -->
+
+  
+
+  
+    <!-- End Snigle 1 -->
+    <!-- Snigle 2 -->
+  
+    <!-- End Snigle 6 -->
+    <!-- End All Snigle Projects -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-avatar">
+                    <img src="{{intro.image.url}}" title="" alt="">
+                </div>
+                <h6>{{intro.fullname}}</h6>
+            </div>
+            <ul class="nav social-link">
+                <li>
+                    <a href="{{about.github}}"target=_blank><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                    <a href="{{about.instagramUrl}}"target=_blank><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="{{about.facebookUrl}}" target=_blank><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="{{about.linkendinUrl}}"target=_blank><i class="fab fa-linkedin"></i></a>
+                </li>
+            </ul>
+            <p class="copyright">© 2024 copyright all right reserved by Ramesh Thapa</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="{% static 'app/assets/js/jquery-3.5.1.min.js'%}"></script>
+    <script src="{% static 'app/assets/vendor/appear/jquery.appear.js'%}"></script>
+    <script src="{% static 'app/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'app/assets/vendor/one-page/scrollIt.min.js'%}"></script>
+    <script src="{% static 'app/assets/js/custom.js'%}"></script>
+    <script src="{% static 'app/assets/js/dark-light.js'%}"></script>
+    <!-- end -->
+</body>
+<!-- Body End -->
+
+</html>
